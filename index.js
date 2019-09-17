@@ -1,6 +1,10 @@
-function takeANumber(line, name) {
-  line.push(name);
-  return "Welcome, " + name + ". You are number " + line.length + " in line.";
+var lastDudeServed = 0;
+
+function takeANumber(line) {
+//  var position = line.length + 1;
+  line.push(lastDudeServed + 1);
+  lastDudeServed++;
+  return "Welcome. You are number " + lastDudeServed;
 }
 
 function nowServing (line) {
